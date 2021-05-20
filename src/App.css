@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+/************ Themes */
+
+/* Dark Theme */
+
+.dark-theme {
+  --primary-bg-color: hsl(222, 26%, 31%);
+  --secondary-bg-color: hsl(223, 31%, 20%);
+  --display-bg-color: hsl(224, 36%, 15%);
+
+  --key-primary-bg-color: hsl(30, 25%, 89%);
+  --key-primary-shadow-color: hsl(28, 16%, 65%);
+  --key-secondary-bg-color: hsl(225, 21%, 49%);
+  --key-secondary-shadow-color: hsl(224, 28%, 35%);
+  --key-tertiary-bg-color: hsl(6, 63%, 50%);
+  --key-tertiary-shadow-color: hsl(6, 70%, 34%);
+
+  --text-light-color: white;
+  --text-dark-color: hsl(221, 14%, 31%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Light Theme */
+
+.light-theme {
+  --primary-bg-color: hsl(0, 0%, 90%);
+  --secondary-bg-color: hsl(0, 5%, 81%);
+  --display-bg-color: hsl(0, 0%, 93%);
+
+  --key-primary-bg-color: hsl(30, 25%, 89%);
+  --key-primary-shadow-color: hsl(35, 11%, 61%);
+  --key-secondary-bg-color: hsl(185, 42%, 37%);
+  --key-secondary-shadow-color: hsl(185, 58%, 25%);
+  --key-tertiary-bg-color: hsl(25, 98%, 40%);
+  --key-tertiary-shadow-color: hsl(25, 99%, 27%);
+
+  --text-light-color: white;
+  --text-dark-color: hsl(60, 10%, 19%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Neon Theme */
 
-.App-link {
-  color: #61dafb;
-}
+.neon-theme {
+  --primary-bg-color: hsl(268, 75%, 9%);
+  --secondary-bg-color: hsl(268, 71%, 12%);
+  --display-bg-color: hsl(268, 71%, 12%);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  --key-primary-bg-color: hsl(268, 47%, 21%);
+  --key-primary-shadow-color: hsl(290, 70%, 36%);
+  --key-secondary-bg-color: hsl(281, 89%, 26%);
+  --key-secondary-shadow-color: hsl(285, 91%, 52%);
+  --key-tertiary-bg-color: hsl(176, 100%, 44%);
+  --key-tertiary-shadow-color: hsl(177, 92%, 70%);
+
+  --text-light-color: white;
+  --text-dark-color: hsl(60, 10%, 19%);
 }
