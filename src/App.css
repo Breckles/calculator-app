@@ -1,3 +1,9 @@
+#app-wrapper {
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+}
+
+
 /************ Themes */
 
 /* Dark Theme */
