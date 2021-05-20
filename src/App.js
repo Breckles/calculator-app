@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment as div } from 'react';
 
 import Header from './components/Header/Header';
 
@@ -8,9 +8,9 @@ function App() {
   const themes = ['light', 'dark', 'neon'];
 
   return (
-    <Fragment>
+    <div id="app-wrapper">
       <Header />
-    </Fragment>
+    </div>
   );
 }
 
