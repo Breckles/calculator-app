@@ -1,7 +1,7 @@
 import classes from './Display.module.css';
 
 const Display = () => {
-  const content = '0';
+  const content = 'Display Component';
   return <section>{content}</section>;
 };
 
