@@ -5,7 +5,7 @@ import classes from './CalcDisplay.module.css';
 const CalcDisplay = (props) => {
   const content = '399,981';
   return (
-    <Card className={`${classes.calcDisplay} ${props.className} calcDisplay`}>
+    <Card className={`${props.className} ${classes.calcDisplay} calcDisplay`}>
       {content}
     </Card>
   );

@@ -1,18 +1,28 @@
 .appWrapper {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   padding: 0 6%;
 }
 
 .headerWrapper {
+  flex: 1 0 7.5rem;
   width: 100%;
-  height: 7.5rem;
   margin-bottom: 3rem;
 }
 
 .calcDisplayWrapper {
+  flex: 1 0 9rem;
   width: 100%;
-  height: 9rem;
   padding: 6% 7%;
+  margin-bottom: 2rem;
 
   font-size: 3.2rem;
+}
+
+.calcButtonsWrapper {
+  flex: 1 1 100%;
+  width: 100%;
+  padding: 7%;
+  margin-bottom: 10%;
 }

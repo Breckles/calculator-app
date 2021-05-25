@@ -16,6 +16,8 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(221, 14%, 31%);
+
+  --font-family: 'Spartan', sans-serif;
 }
 
 
@@ -35,6 +37,8 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(60, 10%, 19%);
+
+  --font-family: 'Spartan', sans-serif;
 }
 
 
@@ -54,6 +58,8 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(60, 10%, 19%);
+
+  --font-family: 'Spartan', sans-serif;
 }
 
 
@@ -62,6 +68,7 @@
 #appWrapper {
   background-color: var(--primary-bg-color);
   color: var(--text-light-color);
+  font-family: var(--font-family);
 }
 
 .themeToggler .toggleBody {
@@ -74,4 +81,30 @@
 
 .calcDisplay {
   background-color: var(--calc-display-bg-color);
+}
+
+.calcButtons {
+  background-color: var(--secondary-bg-color);
+}
+
+.button {
+  background-color: var(--key-primary-bg-color);
+  box-shadow: 0 4px var(--key-primary-shadow-color);
+  color: var(--text-dark-color);
+
+  font-family: var(--font-family);
+  font-size: 2.5rem;
+}
+
+.button.deleteButton,
+.button.resetButton {
+  background-color: var(--key-secondary-bg-color);
+  box-shadow: 0 4px var(--key-secondary-shadow-color);
+  color: var(--text-light-color);
+}
+
+.button.evaluateButton {
+  background-color: var(--key-tertiary-bg-color);
+  box-shadow: 0 4px var(--key-tertiary-shadow-color);
+  color: var(--text-light-color);
 }
