@@ -1,14 +1,8 @@
-/********************************** Global Styles  */
-#appWrapper {
-  height: 100vh;
-}
-
-
 /************************************ Themes */
 
 /* Dark Theme */
 
-.dark-theme {
+.darkTheme {
   --primary-bg-color: hsl(222, 26%, 31%);
   --secondary-bg-color: hsl(223, 31%, 20%);
   --display-bg-color: hsl(224, 36%, 15%);
@@ -27,7 +21,7 @@
 
 /* Light Theme */
 
-.light-theme {
+.lightTheme {
   --primary-bg-color: hsl(0, 0%, 90%);
   --secondary-bg-color: hsl(0, 5%, 81%);
   --display-bg-color: hsl(0, 0%, 93%);
@@ -46,7 +40,7 @@
 
 /* Neon Theme */
 
-.neon-theme {
+.neonTheme {
   --primary-bg-color: hsl(268, 75%, 9%);
   --secondary-bg-color: hsl(268, 71%, 12%);
   --display-bg-color: hsl(268, 71%, 12%);

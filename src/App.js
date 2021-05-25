@@ -1,13 +1,14 @@
 import Header from './components/Header/Header';
-import Display from './components/Display/Display';
+import CalcDisplay from './components/CalcDisplay/CalcDisplay';
 
-import './App.css';
+import classes from './App.module.css';
+import './Themes.css';
 
 function App() {
   return (
-    <div id="appWrapper" className="dark-theme">
-      <Header />
-      <Display />
+    <div id="appWrapper" className={`${classes.appWrapper} darkTheme`}>
+      <Header className={classes.headerWrapper} />
+      <CalcDisplay className={classes.displayWrapper} />
     </div>
   );
 }
