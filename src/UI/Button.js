@@ -6,7 +6,7 @@ const Button = (props) => {
       type={props.type || 'button'}
       className={`${props.className || ''} ${classes.button} button`}
     >
-      {props.children}
+      <span className={`${classes.content}`}>{props.children}</span>
     </button>
   );
 };
