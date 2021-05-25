@@ -8,7 +8,7 @@ function App() {
   return (
     <div id="appWrapper" className={`${classes.appWrapper} darkTheme`}>
       <Header className={classes.headerWrapper} />
-      <CalcDisplay className={classes.displayWrapper} />
+      <CalcDisplay className={classes.calcDisplayWrapper} />
     </div>
   );
 }

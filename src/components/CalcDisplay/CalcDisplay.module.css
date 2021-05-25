@@ -1,3 +1,5 @@
-.display {
-  background-color: black;
+.calcDisplay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
