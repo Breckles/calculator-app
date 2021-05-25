@@ -7,14 +7,23 @@
   padding: 3% 6% 0;
 }
 
-.header>h1 {
+.header h1 {
   flex: 1;
   display: flex;
   align-items: flex-end;
   height: 100%;
 }
 
-.header .theme-toggle-container {
-  flex: 1;
-  height: 100%;
+.header h2 {
+  margin: 0 2rem 0.5rem 0;
+
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.themeTogglerWrapper {
+  display: flex;
+  align-items: flex-end;
+  width: 7rem;
+  height: 4.5rem;
 }

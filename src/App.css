@@ -1,9 +1,10 @@
-#app-wrapper {
+/********************************** Global Styles  */
+#appWrapper {
   height: 100vh;
-  background-color: var(--primary-bg-color);
 }
 
-/************ Themes */
+
+/************************************ Themes */
 
 /* Dark Theme */
 
@@ -59,4 +60,20 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(60, 10%, 19%);
+}
+
+
+/*********************************** Theme Styles */
+
+#appWrapper {
+  background-color: var(--primary-bg-color);
+  color: var(--text-light-color);
+}
+
+.themeToggler .toggleBody {
+  background-color: var(--secondary-bg-color);
+}
+
+.themeToggler .toggleSwitch {
+  background-color: var(--key-tertiary-bg-color);
 }
