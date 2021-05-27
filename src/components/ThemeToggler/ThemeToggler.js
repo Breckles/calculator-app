@@ -5,7 +5,7 @@ import classes from './ThemeToggler.module.css';
 const ThemeToggler = () => {
   const [currentTheme, setCurrentTheme] = useState('lightTheme');
 
-  // This var ultimately dictates the position of the toggle switch
+  // Ultimately dictates the position of the toggle switch
   let toggleSwitchClass = classes.lightTheme;
 
   if (currentTheme === 'darkTheme') {

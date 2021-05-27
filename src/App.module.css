@@ -1,28 +1,66 @@
 .appWrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   height: 100vh;
-  padding: 0 6%;
+}
+
+.appContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 590px;
+  height: 100%;
+  padding: 35px 24px 30px;
 }
 
 .headerWrapper {
-  flex: 1 0 7.5rem;
   width: 100%;
-  margin-bottom: 3rem;
+  height: 3.5rem;
+  margin-bottom: 33px;
+}
+
+.calculator {
+  width: 100%;
+  height: calc(100% - 3.5rem - 33px);
+  max-height: 632px;
 }
 
 .calcDisplayWrapper {
-  flex: 1 0 9rem;
   width: 100%;
-  padding: 6% 7%;
-  margin-bottom: 2rem;
-
-  font-size: 3.2rem;
+  height: 16.5%;
+  padding: 0 7%;
+  margin-bottom: 24px;
 }
 
 .calcButtonsWrapper {
-  flex: 1 1 100%;
   width: 100%;
-  padding: 7%;
-  margin-bottom: 10%;
+  height: calc(83% - 24px);
+  padding: 7.5% 7.4% 8%;
+
+  row-gap: 3.5%;
+  column-gap: 4.5%;
+}
+
+
+/*************************** Media Queries */
+
+@media screen and (min-width: 700px) {
+  .calcButtonsWrapper {
+    column-gap: 5%;
+  }
+}
+
+@media screen and (min-height: 700px) {
+  .calcDisplayWrapper {
+    height: 20%;
+  }
+
+  .calcButtonsWrapper {
+    row-gap: 6%;
+    height: calc(80% - 24px);
+    padding: 6% 5.7% 6.2%;
+  }
 }

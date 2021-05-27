@@ -6,3 +6,9 @@
 .content {
   vertical-align: sub;
 }
+
+@media screen and (min-width: 700px) and (min-height: 700px) {
+  .button {
+    border-radius: 1rem;
+  }
+}

@@ -8,9 +8,13 @@ import './Themes.css';
 function App() {
   return (
     <div id="appWrapper" className={`${classes.appWrapper} darkTheme`}>
-      <Header className={classes.headerWrapper} />
-      <CalcDisplay className={classes.calcDisplayWrapper} />
-      <CalcButtons className={classes.calcButtonsWrapper} />
+      <div className={`${classes.appContent}`}>
+        <Header className={classes.headerWrapper} />
+        <main className={`${classes.calculator}`}>
+          <CalcDisplay className={classes.calcDisplayWrapper} />
+          <CalcButtons className={classes.calcButtonsWrapper} />
+        </main>
+      </div>
     </div>
   );
 }

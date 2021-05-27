@@ -56,11 +56,8 @@
 .toggleSwitch {
   position: absolute;
   top: 50%;
-  width: 25%;
-  padding: 12.5% 0;
-  /* left: 5%; */
-  /* left: 37.5%; */
-  /* left: 70%; */
+  width: 23%;
+  padding: 11.5% 0;
 
   border-radius: 50%;
 
@@ -70,11 +67,11 @@
 }
 
 .toggleSwitch.lightTheme {
-  left: 5%;
+  left: 7%;
 }
 
 .toggleSwitch.darkTheme {
-  left: 37.5%;
+  left: 38.5%;
 }
 
 .toggleSwitch.neonTheme {

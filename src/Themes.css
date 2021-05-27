@@ -81,6 +81,8 @@
 
 .calcDisplay {
   background-color: var(--calc-display-bg-color);
+
+  font-size: 3.2rem;
 }
 
 .calcButtons {
@@ -88,6 +90,9 @@
 }
 
 .button {
+  /* Deal with extra space taken up by box-shadow */
+  margin-bottom: 4px;
+
   background-color: var(--key-primary-bg-color);
   box-shadow: 0 4px var(--key-primary-shadow-color);
   color: var(--text-dark-color);
@@ -109,4 +114,24 @@
   box-shadow: 0 4px var(--key-tertiary-shadow-color);
   color: var(--text-light-color);
   font-size: 1.6rem;
+}
+
+
+@media screen and (min-width: 700px) and (min-height: 700px) {
+  .calcDisplay {
+    font-size: 4.8rem;
+  }
+
+  .button {
+    font-size: 3.1rem;
+  }
+
+  .button.deleteButton,
+  .button.resetButton {
+    font-size: 2rem;
+  }
+
+  .button.evaluateButton {
+    font-size: 2rem;
+  }
 }
