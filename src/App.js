@@ -6,13 +6,18 @@ import classes from './App.module.css';
 import './Themes.css';
 
 function App() {
+  const clickHandler = () => {};
+
   return (
     <div id="appWrapper" className={`${classes.appWrapper} darkTheme`}>
       <div className={`${classes.appContent}`}>
         <Header className={classes.headerWrapper} />
         <main className={`${classes.calculator}`}>
           <CalcDisplay className={classes.calcDisplayWrapper} />
-          <CalcButtons className={classes.calcButtonsWrapper} />
+          <CalcButtons
+            className={classes.calcButtonsWrapper}
+            clickHandler={clickHandler}
+          />
         </main>
       </div>
     </div>
