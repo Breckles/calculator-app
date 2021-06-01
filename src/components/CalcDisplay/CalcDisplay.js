@@ -1,12 +1,23 @@
+import { useSelector } from 'react-redux';
+
 import Card from '../../UI/Card';
 
 import classes from './CalcDisplay.module.css';
 
 const CalcDisplay = (props) => {
-  const content = '399,981';
+  const { displayNumberString, historyString } = useSelector((state) => {
+    return { ...state.calculator };
+  });
+
+  const [integerDigits, decimalDigits] = displayNumberString.split('.');
+
   return (
     <Card className={`${props.className} ${classes.calcDisplay} calcDisplay`}>
-      {content}
+      {+integerDigits.toLocaleString()}
+      {displayNumberString.includes('.') && '.'}
+      {decimalDigits}
+
+      <div className={`${classes.history}`}>{historyString}</div>
     </Card>
   );
 };
