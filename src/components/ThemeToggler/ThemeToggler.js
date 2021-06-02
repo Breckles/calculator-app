@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { themeActions } from '../../store/theme';
 
 import classes from './ThemeToggler.module.css';
 
-const ThemeToggler = () => {
-  const [currentTheme, setCurrentTheme] = useState('lightTheme');
+const ThemeToggler = (props) => {
+  const dispatch = useDispatch();
+  const currentTheme = useSelector((state) => state.theme.theme);
+
+  const themeSwitchHandler = (event) => {
+    dispatch(themeActions.setTheme(event.target.value));
+  };
 
   // Ultimately dictates the position of the toggle switch
   let toggleSwitchClass = classes.lightTheme;
@@ -14,26 +21,38 @@ const ThemeToggler = () => {
     toggleSwitchClass = classes.neonTheme;
   }
 
-  const themeSwitchHandler = (event) => {
-    console.log(event.target.value);
-    if (event.target.value === currentTheme) {
-      return;
-    }
-
-    setCurrentTheme(event.target.value);
-  };
-
   return (
-    <div className={`${classes.themeToggler} themeToggler`}>
+    <div className={`${classes.themeToggler} themeToggler ${props.className}`}>
       <ul className={`${classes.labels} labels`}>
         <li>
-          <label htmlFor="themeInputLight">1</label>
+          <label
+            htmlFor="themeInputDark"
+            className={
+              currentTheme === 'darkTheme' ? `${classes.active}` : undefined
+            }
+          >
+            1
+          </label>
         </li>
         <li>
-          <label htmlFor="themeInputDark">2</label>
+          <label
+            htmlFor="themeInputLight"
+            className={
+              currentTheme === 'lightTheme' ? `${classes.active}` : undefined
+            }
+          >
+            2
+          </label>
         </li>
         <li>
-          <label htmlFor="themeInputNeon">3</label>
+          <label
+            htmlFor="themeInputNeon"
+            className={
+              currentTheme === 'neonTheme' ? `${classes.active}` : undefined
+            }
+          >
+            3
+          </label>
         </li>
       </ul>
 
@@ -41,16 +60,10 @@ const ThemeToggler = () => {
         <ul className={`${classes.radioInputs} radioInputs`}>
           <li>
             <input
-              id="themeInputLight"
-              name="theme"
-              type="radio"
-              value="lightTheme"
-              onClick={themeSwitchHandler}
-            />
-          </li>
-          <li>
-            <input
               id="themeInputDark"
+              className={
+                currentTheme === 'darkTheme' ? `${classes.active}` : undefined
+              }
               name="theme"
               type="radio"
               value="darkTheme"
@@ -59,7 +72,22 @@ const ThemeToggler = () => {
           </li>
           <li>
             <input
+              id="themeInputLight"
+              className={
+                currentTheme === 'lightTheme' ? `${classes.active}` : undefined
+              }
+              name="theme"
+              type="radio"
+              value="lightTheme"
+              onClick={themeSwitchHandler}
+            />
+          </li>
+          <li>
+            <input
               id="themeInputNeon"
+              className={
+                currentTheme === 'neonTheme' ? `${classes.active}` : undefined
+              }
               name="theme"
               type="radio"
               value="neonTheme"

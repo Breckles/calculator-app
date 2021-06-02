@@ -1,15 +1,19 @@
+import { useSelector } from 'react-redux';
+
 import Header from './components/Header/Header';
 import CalcDisplay from './components/CalcDisplay/CalcDisplay';
 import CalcButtons from './components/CalcButtons/CalcButtons';
 
-import classes from './App.module.css';
 import './Themes.css';
+import classes from './App.module.css';
 
 function App() {
+  const theme = useSelector((state) => state.theme.theme);
+
   const clickHandler = () => {};
 
   return (
-    <div id="appWrapper" className={`${classes.appWrapper} darkTheme`}>
+    <div className={`${classes.appWrapper} appWrapper ${theme}`}>
       <div className={`${classes.appContent}`}>
         <Header className={classes.headerWrapper} />
         <main className={`${classes.calculator}`}>

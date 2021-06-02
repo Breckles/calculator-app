@@ -16,6 +16,13 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(221, 14%, 31%);
+  --display-text-color: var(--text-light-color);
+  --theme-toggler-text-color: var(--text-light-color);
+  --header-text-color: var(--text-light-color);
+  --button-text-color: var(--text-dark-color);
+  --delete-button-text-color: var(--text-light-color);
+  --reset-button-text-color: var(--text-light-color);
+  --evaluate-button-text-color: var(--text-light-color);
 
   --font-family: 'Spartan', sans-serif;
 }
@@ -37,6 +44,13 @@
 
   --text-light-color: white;
   --text-dark-color: hsl(60, 10%, 19%);
+  --display-text-color: var(--text-dark-color);
+  --theme-toggler-text-color: var(--text-dark-color);
+  --header-text-color: var(--text-dark-color);
+  --button-text-color: var(--text-dark-color);
+  --delete-button-text-color: var(--text-light-color);
+  --reset-button-text-color: var(--text-light-color);
+  --evaluate-button-text-color: var(--text-light-color);
 
   --font-family: 'Spartan', sans-serif;
 }
@@ -57,7 +71,15 @@
   --key-tertiary-shadow-color: hsl(177, 92%, 70%);
 
   --text-light-color: white;
-  --text-dark-color: hsl(60, 10%, 19%);
+  --text-dark-color: hsl(198, 20%, 13%);
+  --text-tertiary-color: hsl(52, 100%, 62%);
+  --display-text-color: var(--text-tertiary-color);
+  --theme-toggler-text-color: var(--text-tertiary-color);
+  --header-text-color: var(--text-tertiary-color);
+  --button-text-color: var(--text-tertiary-color);
+  --delete-button-text-color: var(--text-light-color);
+  --reset-button-text-color: var(--text-light-color);
+  --evaluate-button-text-color: var(--text-dark-color);
 
   --font-family: 'Spartan', sans-serif;
 }
@@ -65,28 +87,68 @@
 
 /*********************************** Theme Styles */
 
-#appWrapper {
+.appWrapper {
   background-color: var(--primary-bg-color);
   color: var(--text-light-color);
   font-family: var(--font-family);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
 }
+
+.header {
+  color: var(--header-text-color);
+
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.themeToggler {
+  color: var(--theme-toggler-text-color);
+
+  transition-property: color;
+  transition-duration: 350ms;
+  transition-timing-function: linear;
+}
+
 
 .themeToggler .toggleBody {
   background-color: var(--secondary-bg-color);
+
+  transition-property: background-color;
+  transition-duration: 350ms;
+  transition-timing-function: linear;
 }
+
 
 .themeToggler .toggleSwitch {
   background-color: var(--key-tertiary-bg-color);
+
+  transition-property: all;
+  transition-duration: 350ms;
+  transition-timing-function: linear;
 }
+
 
 .calcDisplay {
   background-color: var(--calc-display-bg-color);
+  color: var(--display-text-color);
 
   font-size: 3.2rem;
+
+  transition-property: background-color, color;
+  transition-duration: 450ms;
+  transition-timing-function: linear;
 }
 
 .calcButtons {
   background-color: var(--secondary-bg-color);
+
+  transition-property: background-color;
+  transition-duration: 550ms;
+  transition-timing-function: linear;
 }
 
 .button {
@@ -95,10 +157,14 @@
 
   background-color: var(--key-primary-bg-color);
   box-shadow: 0 4px var(--key-primary-shadow-color);
-  color: var(--text-dark-color);
+  color: var(--button-text-color);
 
   font-family: var(--font-family);
   font-size: 2.7rem;
+
+  transition-property: all;
+  transition-duration: 550ms;
+  transition-timing-function: linear;
 }
 
 .button.deleteButton,
@@ -109,10 +175,14 @@
   font-size: 1.7rem;
 }
 
+.button.deleteButton {
+  color: var(--delete-button-text-color);
+}
+
 .button.evaluateButton {
   background-color: var(--key-tertiary-bg-color);
   box-shadow: 0 4px var(--key-tertiary-shadow-color);
-  color: var(--text-light-color);
+  color: var(--evaluate-button-text-color);
   font-size: 1.6rem;
 }
 

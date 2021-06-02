@@ -135,7 +135,6 @@ const evaluate = (state) => {
     const operand2 = state.numberStack[1];
 
     const result = operator === '+' ? operand1 + operand2 : operand1 - operand2;
-    console.log(result);
     state.numberStack.splice(0, 2, result);
   }
 

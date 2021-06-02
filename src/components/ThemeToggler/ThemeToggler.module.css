@@ -41,6 +41,11 @@
   opacity: 0;
 }
 
+.themeToggler input.active,
+.themeToggler label.active {
+  pointer-events: none;
+}
+
 .toggleBody {
   position: relative;
   flex: 2;
@@ -66,11 +71,11 @@
   transition: left 100ms linear;
 }
 
-.toggleSwitch.lightTheme {
+.toggleSwitch.darkTheme {
   left: 7%;
 }
 
-.toggleSwitch.darkTheme {
+.toggleSwitch.lightTheme {
   left: 38.5%;
 }
 

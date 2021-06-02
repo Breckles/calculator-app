@@ -47,6 +47,8 @@
 
 /*************************** Media Queries */
 
+/* Viewport Queries */
+
 @media screen and (min-width: 700px) {
   .calcButtonsWrapper {
     column-gap: 5%;
